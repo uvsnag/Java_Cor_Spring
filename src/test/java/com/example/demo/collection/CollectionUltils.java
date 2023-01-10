@@ -9,7 +9,7 @@ import javax.swing.text.html.HTMLDocument.Iterator;
 public class CollectionUltils {
 	
 	public void test() {
-		java.util.List<String> arrL = new ArrayList<>();
+		java.util.List<String> arrL = new ArrayList<>(5);
 		arrL.add("a");
 		arrL.add("c");
 		arrL.add("b");
