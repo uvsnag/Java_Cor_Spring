@@ -4,15 +4,21 @@ package com.example.demo.rewrite.collection;
 public class SArrayList<E> implements SList<E>  {
 
 	private int count = 0;
-	private static final int DEFAULT_CAPACITY = 10;
-	Object[] elementArr;
+//	private int capacity = 0;
+//	private static final int DEFAULT_CAPACITY = 10;
+	private static final int DEFAULT_CAPACITY = 3;
+//	private static final Object[] DEFAULT_ARR_INIT = {};
+	E[] elementArr;
 	
+//	SArrayList(){
+//		elementArr = DEFAULT_ARR_INIT;
+//	}
 	@Override
 	public int size() {
 		if(elementArr == null || elementArr.length == 0) {
 			return 0;
 		}
-		return elementArr.length;
+		return count;
 	}
 
 	@Override
@@ -24,18 +30,17 @@ public class SArrayList<E> implements SList<E>  {
 	}
 
 	@Override
-	public boolean add(Object e) {
-		if(isEmpty() || size()+1> count) {
-			Object[] temp = elementArr;
-			elementArr = new Object[count+DEFAULT_CAPACITY];
-			if(!isEmpty() ) {
-				for(int i = 0; i< size(); i++) {
-					elementArr[i] = temp[i];
-				}
+	public boolean add(E e) {
+		if(size()<= count+1) {
+			E[] temp = elementArr;
+			elementArr = (E[]) new Object[count+DEFAULT_CAPACITY];
+			for(int i = 0; i< size(); i++) {
+				elementArr[i] = temp[i];
 			}
+			elementArr[count++] = e;
+			return false;
 		}
-		elementArr[count] = e;
-		count++;
+		
 		return false;
 	}
 
@@ -45,16 +50,17 @@ public class SArrayList<E> implements SList<E>  {
 			return false;
 		}
 		int i = o;
-		int length =  elementArr.length;
-		while(i<length-1) {
+		while(i<count-1) {
 			elementArr[i] = elementArr[i+1];
 			i++;
 		}
+		elementArr[count-1] = null;
+		count --;
 		return true;
 	}
 
 	@Override
-	public Object get(int o) {
+	public E get(int o) {
 		if(o>=size() || o<0) {
 			throw new IllegalArgumentException("exception here .....");
 		}

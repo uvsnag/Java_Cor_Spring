@@ -6,15 +6,39 @@ import java.util.List;
 public class MainTest {
 
 	public static void main(String[] args) {
-		SList<String> list = new SArrayList<>();
-		list.add("sadsa");
-		
-		for (int i =0 ; i<list.size(); i++) {
-			System.out.println(list.get(i));
-		}
-		
-		
+//		List<String> listt = new ArrayList<>();
+//		SList<String> list = new SArrayList<>();
+//		list.add("1");
+//		list.add("2");
+//		list.add("3");
+//		list.add("4");
+//		list.add("5");
+//		list.add("6");
+//		list.add("7");
+//		System.out.println(list.size());
+//		list.remove(0);
+//		list.remove(2);
+//		list.remove(5);
+//		System.out.println(list.size());
+//		
+//		for (int i =0 ; i<list.size(); i++) {
+//			System.out.println(list.get(i));
+//		}
 
+		
+		SLinkedList<String> lklist = new DSLinkedList<>();
+		
+		lklist.addFirst("s1");
+		lklist.addFirst("s2");
+		lklist.addFirst("s4");
+		lklist.addLast("s3");
+		System.out.println(lklist.size());
+		System.out.println(lklist.get(0));
+		lklist.printAll();
+		lklist.removeAt(1);
+		lklist.removeFirst();
+		lklist.removeLast();
+		lklist.printAll();
 	}
 
 }
