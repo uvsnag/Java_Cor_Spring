@@ -19,7 +19,7 @@ public class MapT {
 		map.put(2, "rrr");
 		map.replace(1, "dsad");
 
-//		utils.printCollSet(map.entrySet());
+		utils.printCollSet(map.entrySet());
 		
 		  EnumMap<Days, String> mapm = new EnumMap<Days, String>(Days.class); 
 		  mapm.put(Days.MONDAY, "1");  
@@ -27,8 +27,8 @@ public class MapT {
 //		  utils.printCollSet(mapm.entrySet());
 		  
 		  
-		  Properties p = System.getProperties();
-		  utils.printCollSet(p.entrySet());
+//		  Properties p = System.getProperties();
+//		  utils.printCollSet(p.entrySet());
 	}
 
 }

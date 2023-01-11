@@ -2,7 +2,7 @@ package com.example.demo.java8;
 
 import java.util.List;
 
-import com.example.demo.dto.Employee;
+import com.example.demo.dto.EmployeeT;
 
 public class ExpUltils {
 
@@ -11,7 +11,7 @@ public class ExpUltils {
 			System.out.println(i);
 		});
 	}
-	public  void printOb(List<Employee> list) {
+	public  void printOb(List<EmployeeT> list) {
 		list.forEach((e)->{
 			System.out.println(e.getId()+"-"+ e.getName());
 		});

@@ -9,7 +9,7 @@ import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.example.demo.dto.Employee;
+import com.example.demo.dto.EmployeeT;
 
 public class LambdaExpression {
 	public static void main(String[] args) {
@@ -34,11 +34,11 @@ class LambTest{
 //		List<String> list = List.of("a", "b", "c");
 		
 		//sort.
-		List<Employee> list = new ArrayList<>();
-		list.add(new Employee(3, "t"));
-		list.add(new Employee(2, "e"));
-		list.add(new Employee(1, "e"));
-		list.add(new Employee(6, "y"));
+		List<EmployeeT> list = new ArrayList<>();
+		list.add(new EmployeeT(3, "t"));
+		list.add(new EmployeeT(2, "e"));
+		list.add(new EmployeeT(1, "e"));
+		list.add(new EmployeeT(6, "y"));
 //		Collections.sort(list, (a, b)->{
 //			return a.getId().compareTo(b.getId());
 //		});

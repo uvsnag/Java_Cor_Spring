@@ -51,7 +51,7 @@ public class CollectionUltils {
 	    while(itr.hasNext()){  
 	        //Converting to Map.Entry so that we can get key and value separately  
 	        Map.Entry entry=(Map.Entry)itr.next();  
-	        System.out.println(entry.getKey().hashCode()+" "+entry.getValue().hashCode());  
+//	        System.out.println(entry.getKey().hashCode()+" "+entry.getValue().hashCode());  
 	        System.out.println(entry.getKey()+" "+entry.getValue());  
 	    }  
 		
