@@ -48,7 +48,6 @@ public class MainTest {
 		System.out.println(hashes.get("1"));
 		System.out.println(hashes.get("4"));
 		
-		
 	}
 
 }

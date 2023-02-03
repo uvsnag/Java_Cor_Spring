@@ -26,7 +26,7 @@ class DemoApplicationTests {
 //		}
 //	}
 
-//	@Autowired
+	@Autowired
 	private MemberDao memberDao;
 	
 	@Test

@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +34,7 @@ class DemoApplicationTestsController {
 	@MockBean
     private MemberDao memberDao;
 	
-	
+	@DisplayName("controller return at least a value")
 	@Test
 	void test() throws Exception {
 		List<MemberDto> findAllList = IntStream.range(0, 3)

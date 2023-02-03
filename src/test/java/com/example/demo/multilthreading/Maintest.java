@@ -3,14 +3,11 @@ package com.example.demo.multilthreading;
 public class Maintest {
 
 	public static void main(String[] args) {
-	
-		int[][] arr = new int[4][5];
-		System.out.println(arr.length);
-		System.out.println(arr[0].length);
-		test t = new test();
-		t.change(arr);
-		System.out.println(arr[0][0]);
-		
-//		for(int i=0; i<4)
+		AThread thread1 = new AThread("Thead 1");
+		AThread thread2 = new AThread("Thead 2");
+		AThread thread3 = new AThread("Thead 3");
+		thread1.start();
+		thread2.start();
+		thread3.start();
 	}
 }
